@@ -1,0 +1,5 @@
+message = ("Привет, дорогой друг")
+print(message[16:20])
+print(message[16:])
+print(message[-4:])
+print(message[::-1])
