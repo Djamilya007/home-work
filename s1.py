@@ -1,0 +1,11 @@
+a = ['Мечты порой должны оставаться мечтами.']
+a.append('Ну не знаю') 
+print(a)
+#a.remove('ну')
+#print(a)
+a.reverse()
+print(a)
+a.copy()
+print(a)
+a.clear()
+print(a)
