@@ -1,4 +1,2 @@
-from os import mkdir
-
-for i in range(1,10):
-	mkdir("Джамиля королева" + str(i))
+from os import rename
+rename("C:\питончик\Джамиля.txt , C:\питончик\Бажика.txt")
