@@ -1,17 +1,13 @@
-def roots(a = 1, b = 1, c = 2):
-	D = b*b - 4*a*c 
-	if D < 0:
-		print('Нет действительных корней') 
-		return
-	elif D == 0:
-		print('Два совпадающих корня')
-		x1 = -b/(2*a)
-		return x1
-	else:
-		print('Два различных корня')
-		x1 = (-b+D**0.5)/(2*a)
-		x2 = (-b-D**0.5)/(2*a)
-		return x1, x2
-		
-x1, x2 = roots(1,2,0)
-print(x1,x2)
+class MagicPerson:
+	def __init__(self,favourite_weapon,areal, damage, hp):
+		self.favourite_weapon = favourite_weapon
+		self.areal = areal
+		self.damage = damage
+		self.hp = hp
+
+	def fight(self):
+		print('Бью сильно!'*self.damage)
+
+class Elf(MagicPerson):
+	def __init__(self,favourite_weapon,areal, damage, hp):
+		super().__init__()
