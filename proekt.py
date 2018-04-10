@@ -46,7 +46,7 @@ class Multi(QMainWindow):
 
 		grid2.addWidget(self.nameBlock2, 0, 0)
 		grid2.addWidget(self.nameInput2, 1, 0)
-		grid2.addWidget(self.button, 2, 0)		
+		grid2.addWidget(self.button, 2, 0)      
 
 		self.firstWindow.setLayout(grid1)
 		self.secondWindow.setLayout(grid2)
@@ -87,7 +87,7 @@ class Multi(QMainWindow):
 		grid3.addWidget(self.ageInput, 3, 0)
 		grid3.addWidget(self.genderBlock, 4, 0)
 		grid3.addWidget(self.genderInput, 5, 0)
-		grid3.addWidget(self.button, 6, 0)		
+		grid3.addWidget(self.button, 6, 0)      
 
 		self.setGeometry(100, 100, 450, 250)
 		self.setWindowTitle('Регистрация')
@@ -98,19 +98,19 @@ class Multi(QMainWindow):
 		self.show()
 
 		# четвертое окно
-        self.textWindow = QWidget(self)
-        grid4 = QGridLayout() 
+		self.textWindow = QWidget(self)
+		grid4 = QGridLayout() 
 		grid4.setSpacing(20)
 
 		self.testBlock = QLabel('')
-		self.testBtn1 = QPushButton('урок №1', self)
+		self.testBtn1 = QPushButton('Артикль', self)
 		self.testBtn1.clicked.connect(self.test2)
 
 		grid4.addWidget(self.testBlock, 0, 0)
 		grid4.addWidget(self.testBtn1, 0, 1)
 
 		self.testBlock = QLabel('')
-		self.testBtn2 = QPushButton('урок №2', self)
+		self.testBtn2 = QPushButton('Глаголы', self)
 		self.testBtn2.clicked.connect(self.test1)
 
 		grid4.addWidget(self.testBlock, 0, 0)
@@ -180,18 +180,73 @@ The Earth — земля
 		self.textInput4 = QLineEdit(self)
 
 		self.completion1 = QPushButton('Закрыть', self)
-		self.completion1.clicked.connect(self.test1)
+		self.completion1.clicked.connect(self.Next2)
 
 		grid5.addWidget(self.textBlock4, 0, 0)
 		grid5.addWidget(self.textInput4, 1, 0)
-		grid5.addWidget(self.completion1, 6, 0)		
+		grid5.addWidget(self.completion1, 6, 0)     
 
-		self.text1Window.setLayout(grid5)	
+		self.text1Window.setLayout(grid5)   
 		self.setLayout(grid5)
 
+		#шестое  окно
+		self.text2Window = QWidget(self)
+		grid6 = QGridLayout() 
+		grid6.setSpacing(20)
 
+		self.textBlock4 = QLabel('''Вce aнглийckиe глaгoлы paздeляют нa двe kaтeгopии:
+Camocтoятeльныm глaгoлam хapakтepнo нaличиe лekcичeckoгo знaчeния; выpaжaют пpoизвoдиmoe дeйcтвиe либo cocтoяниe.
+Cлyжeбныe глaгoлы cвoeгo знaчeния нe иmeют, a лишь пomoгaют в cтpoeнии гpammaтичeckих koнcтpykций и внocят яcнocть в знaчeниe camocтoятeльнoгo глaгoлa.
+Виды cлyжeбных глaгoлoв
+1.cвязkи, cлyжaщиe для oбpaзoвaния cлoжных глaгoлoв (linking verbs):
+to be;
+to get;
+to become;
+to look;
+to keep etc.
 
-    
+2.moдaльныe — пomoгaют гoвopящemy выpaзить cвoe mнeниe kacaemo дeйcтвия (modal verbs):
+may;
+can;
+need;
+must;
+ought etc.
+
+3.вcпomoгaтeльныe — бeз них нeльзя oбpaзoвaть cocтaвнoe ckaзyemoe (auxiliary verbs):
+to be;
+to do;
+to have;
+will;
+
+Вcпomoгaтeльный глaгoл to be
+Для нacтoящeгo вpemeни — тpи фopmы, зaвиcящиe oт poдa и чиcлa: I am, he is, you/they are;
+В пpoшeдшem вpemeни зaвиcит тoльko oт чиcлa, cooтвeтcтвeннo иmeeт двe фopmы: she was, you were;
+Oтpицaтeльныe фopmы oбpaзoвывaют c пomoщью чacтичkи «not»: I am not, she is not, he was not, they were not;
+В вoпpocaх вынocятcя в нaчaлo пpeдлoжeния: Is she? Were they? Was I
+
+Глaгoл to do
+Нacтoящee вpemя (двe фopmы): you/they do, it does;
+Пpoшeдшee вpemя иmeeт eдинyю фopmy did;
+Для coздaния oтpицaния нeoбхoдиmo дoбaвить чacтицy not (cokpaщeнный вapиaнт -n’t): I don’t, she does not, they didn’t;
+Aнaлoгичнo пpeдыдyщemy глaгoлy вынocитьcя в нaчaлo вoпpoca: Do you? Did it?
+
+Глaгoл to have
+Фopmы нacтoящeгo вpemeни: I/you/they have, he/she/it has.
+Для пpoшeдшeгo вpemeни иcпoльзyeтcя eдинaя фopma — had.
+Oтpицaтeльнaя фopma тakжe c чacтичkoй «not/(-n’t)»: have not/haven’t, hasn’t. hadn’t.
+Cтoит в нaчaлe вoпpocoв: Hashe? Had they? 
+''')
+		self.textInput5 = QLineEdit(self)
+
+		self.completion2 = QPushButton('Закрыть', self)
+		self.completion2.clicked.connect(self.Next3)
+ 
+		grid5.addWidget(self.textBlock4, 0, 0)
+		grid5.addWidget(self.textInput4, 1, 0)
+		grid5.addWidget(self.completion1, 6, 0)     
+
+		self.text2Window.setLayout(grid6)
+		self.setLayout(grid6)
 
 		#седьмое  окно
 		self.testWindow = QWidget(self)
@@ -219,6 +274,7 @@ The Earth — земля
 		self.testWindow.setLayout(grid7)
 
 		self.setLayout(grid7)
+
 		#восьмое окно
 		self.firstTestWindow = QWidget(self)
 		grid8 = QGridLayout() 
@@ -245,7 +301,7 @@ The Earth — земля
 
 		self.question2 = QLabel('''How old ...you?
 			1)am, 2)is, 3)are''')
-		self.answer2 = QLineEdit(self)		
+		self.answer2 = QLineEdit(self)      
 
 		self.question3 = QLabel('''What ... your name
 			1)am, 2)is, 3)are''')
@@ -269,7 +325,7 @@ The Earth — земля
 
 
 
-		self.firstTestWindow.setLayout(grid8)	
+		self.firstTestWindow.setLayout(grid8)   
 		self.setLayout(grid8)
 
 		#девятое окно
@@ -278,18 +334,18 @@ The Earth — земля
 		grid9.setSpacing(20)
 
 		self.question_1 = QLabel('''I _______ the Star Wars films.  
-        A) have never seen  B) have ever seen  C) have never saw ''')
+		A) have never seen  B) have ever seen  C) have never saw ''')
 		self.answer_1 = QLineEdit(self)
 
 		self.question_2 = QLabel('''They_____ for Google_____2004.  
-        A) worked / for  B) ’ve worked / since  C) ’re working / since ''')
+		A) worked / for  B) ’ve worked / since  C) ’re working / since ''')
 		self.answer_2 = QLineEdit(self)
 
 		self.question_3 = QLabel('''____Neil_____ that he didn’t get the job?  
-        A) Did / tell  B) Have / told  C) Has / been told ''')
+		A) Did / tell  B) Have / told  C) Has / been told ''')
 		self.answer_3 = QLineEdit(self)
-		self.question_4 = QLabel('''	If you ______ that expensive car, you ___ enough money to go on holiday.  
-        A) buy / won’t have  B) bought / don’t have  C) don’t buy / won’t have ''')
+		self.question_4 = QLabel('''    If you ______ that expensive car, you ___ enough money to go on holiday.  
+		A) buy / won’t have  B) bought / don’t have  C) don’t buy / won’t have ''')
 		self.answer_4 = QLineEdit(self)
 
 		self.completion2 = QPushButton('Завершить тест', self)
@@ -307,8 +363,6 @@ The Earth — земля
 
 
 		self.secondTestWindow.setLayout(grid9)
-
-
 		self.setLayout(grid9)
 
 	def Next(self):
@@ -316,6 +370,17 @@ The Earth — земля
 
 	def Next1(self):
 		self.setCentralWidget(self.thirdWindow)
+
+	def Next2(self):
+		self.setCentralWidget(self.firstTestWindow)
+
+	def Next3(self):
+		self.setCentralWidget(self.secondTestWindow)
+
+
+	
+
+
 
 	def sendForm(self):
 		f = open('Список пользователей2.txt','r') 
