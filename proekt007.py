@@ -52,7 +52,6 @@ class Multi(QMainWindow):
 
 		self.setCentralWidget(self.firstWindow)
 
-
 		self.setGeometry(100, 100, 450, 250)
 		self.setWindowTitle('Авторизация')
 
