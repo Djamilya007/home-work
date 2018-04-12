@@ -21,7 +21,6 @@ class Multi(QMainWindow):
 		grid1.addWidget(self.textBlock, 0, 0)
 		grid1.addWidget(self.slideBtn1, 0, 1)
 
-
 		self.textBlock = QLabel('')
 		self.slideBtn2 = QPushButton('авторизация', self)
 		self.slideBtn2.clicked.connect(self.Next)
@@ -139,9 +138,6 @@ class Multi(QMainWindow):
 		self.text2Window = QWidget(self)
 		grid5 = QGridLayout() 
 		grid5.setSpacing(20)
-
-
-		self.textInput5 = QLineEdit(self)
 
 		self.completion2 = QPushButton('Закрыть', self)
 		self.completion2.clicked.connect(self.Next3)
@@ -302,7 +298,6 @@ class Multi(QMainWindow):
 	def Next3(self):
 		self.setCentralWidget(self.testWindow)
 
-
 	def sendForm(self):
 		f = open('Список пользователей.txt','r') 
 		list_of_name = f.read() 
@@ -313,7 +308,6 @@ class Multi(QMainWindow):
 			self.nameBlock2.setText('Вас нет в списке') 
 		f.close() 
 		self.nameInput2.setText('') 
-
 
 	def sendForm1(self): 
 		f = open('Список пользователей.txt', 'a')
