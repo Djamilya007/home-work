@@ -320,6 +320,12 @@ class Multi(QMainWindow):
 		f.close() 
 		self.setCentralWidget(self.firstTestWindow)
 
+	def sendResult2(self): 
+		f = open('Результаты пользователей.txt', 'a')
+		f.write(self.answer_1.text() + self.answer_2.text() + self.answer_3.text()+ self.answer_4.text()+ '\n')
+		f.close() 
+
+
 
 	def test1(self):
 		self.setCentralWidget(self.firstTestWindow)
