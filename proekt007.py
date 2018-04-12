@@ -21,6 +21,7 @@ class Multi(QMainWindow):
 		grid1.addWidget(self.textBlock, 0, 0)
 		grid1.addWidget(self.slideBtn1, 0, 1)
 
+
 		self.textBlock = QLabel('')
 		self.slideBtn2 = QPushButton('авторизация', self)
 		self.slideBtn2.clicked.connect(self.Next)
@@ -51,6 +52,7 @@ class Multi(QMainWindow):
 		self.secondWindow.setLayout(grid2)
 
 		self.setCentralWidget(self.firstWindow)
+
 
 		self.setGeometry(100, 100, 450, 250)
 		self.setWindowTitle('Авторизация')
@@ -285,17 +287,12 @@ class Multi(QMainWindow):
 	def Next1(self):
 		self.setCentralWidget(self.thirdWindow)
 
-	# def Next2(self):
-	# 	self.setCentralWidget(self.text1Window)
-
-	# def Next3(self):
-	# 	self.setCentralWidget(self.text2Window)
-
 	def Next2(self):
 		self.setCentralWidget(self.testWindow)
 
 	def Next3(self):
 		self.setCentralWidget(self.testWindow)
+
 
 	def sendForm(self):
 		f = open('Список пользователей.txt','r') 
@@ -316,23 +313,20 @@ class Multi(QMainWindow):
 		f.close() 
 		self.setCentralWidget(self.text1Window)
 
+
 	def sendResult1(self):
 		f = open('Результаты пользователей.txt', 'a')
 		f.write(self.answer1.text() + self.answer2.text() + self.answer3.text()+ self.answer4.text()+ '\n')
 		f.close() 
 		self.setCentralWidget(self.firstTestWindow)
 
-	# def sendResult2(self): 
-	# 	f = open('Результаты пользователей.txt', 'a')
-	# 	f.write(self.answer_1.text() + self.answer_2.text() + self.answer_3.text()+ self.answer_4.text()+ '\n')
-	# 	f.close() 
 
 	def test1(self):
 		self.setCentralWidget(self.firstTestWindow)
 
+	def test2(self):
+		self.setCentralWidget(self.secondTestWindow)
 
-	# def test2(self):
-	# 	self.setCentralWidget(self.secondTestWindow)
 
 
 	def result(self):
